@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Recalibrate</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Make Google Form responsive */
+    .google-form {
+      width: 100%;
+      max-width: 800px; /* limits form width on large screens */
+      height: 640px;
+      margin: 0 auto;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Recalibrate</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="offerings.html">Offerings</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section style="text-align:center; margin: 2rem 1rem;">
+      <h2>Contact Us</h2>
+      <p>Have questions or want to book a session? Fill out the form below and we’ll get back to you!</p>
+
+      <!-- Google Form embed -->
+      <iframe class="google-form" 
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfnjag-3K6GXaC1Re81m3I1youq6uA8OfYh3S93Reg0u0JJqg/viewform?embedded=true">
+        Loading…
+      </iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Recalibrate</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
