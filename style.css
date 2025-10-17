@@ -2,7 +2,7 @@
 body {
   font-family: 'Inter', sans-serif;
   background-color: #F8F5F0; /* fallback */
-  background-image: url('IMG_6842.jpg'); /* your uploaded image */
+  background-image: url('IMG_6842.jpg'); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -10,7 +10,8 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.7;
-  z-index: -1;
+  position: relative;
+  z-index: 0;
 }
 
 /* --- Overlay for readability --- */
@@ -27,23 +28,28 @@ body::before {
 
 /* --- Header --- */
 header {
-  background-color: #ffffff; /* White background */
+  background-color: #ffffff; /* white header */
   padding: 1em 2em;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 10;
+  text-align: left;
 }
 
 .header-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column; /* logo on top, nav beneath */
+  align-items: flex-start; /* align left */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .logo img {
-  height: 50px; /* adjust as needed */
+  height: 60px; /* adjust as needed */
+  margin-bottom: 0.5em; /* spacing between logo and nav */
 }
 
+/* --- Navigation Menu --- */
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -58,7 +64,7 @@ header {
 .main-nav a {
   font-family: 'Vercetti Regular', sans-serif;
   text-decoration: none;
-  color: #2C2C2C; /* Charcoal color */
+  color: #2C2C2C; /* charcoal */
   font-weight: normal;
   font-size: 14px;
   text-transform: uppercase;
@@ -67,39 +73,10 @@ header {
 }
 
 .main-nav a:hover {
-  color: #8A9D74; /* Sage green on hover */
+  color: #8A9D74; /* sage green on hover */
 }
 
-
-/* --- Navigation --- */
-nav {
-  position: relative;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  margin-left: 1.5em;
-}
-
-.nav-links a {
-  color: #2C2C2C; /* charcoal text */
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: #8A9D74; /* sage accent on hover */
-}
-
-/* --- Hamburger --- */
+/* --- Responsive Hamburger --- */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -113,50 +90,25 @@ nav {
   background-color: #2C2C2C;
 }
 
-/* --- Responsive --- */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: #ffffff;
+  .main-nav ul {
     flex-direction: column;
-    width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    padding: 1em;
+    display: none;
+    width: 100%;
   }
 
-  .nav-links li {
-    margin: 1em 0;
-  }
-
-  .hamburger {
-    display: flex;
+  .main-nav li {
+    margin: 0.5em 0;
   }
 
   .nav-active {
     display: flex;
   }
 
-
-/* --- Navigation --- */
-nav {
-  margin-top: 0.8em;
-}
-
-nav a {
-  color: #F8F5F0;
-  text-decoration: none;
-  margin: 0 1em;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-nav a:hover,
-nav a.active {
-  color: #8A9D74; /* sage green accent */
+  .hamburger {
+    display: flex;
+    margin-top: 0.5em;
+  }
 }
 
 /* --- Main Layout --- */
@@ -183,7 +135,7 @@ main {
 }
 
 .event h3 {
-  color: #6B4A2B; /* primary earthy brown */
+  color: #6B4A2B;
   margin-top: 0;
   font-weight: 600;
 }
@@ -219,7 +171,7 @@ footer {
   font-size: 0.9em;
 }
 
-/* --- Responsive --- */
+/* --- Responsive Event Grid --- */
 @media (min-width: 700px) {
   .event-list {
     grid-template-columns: 1fr 1fr;
