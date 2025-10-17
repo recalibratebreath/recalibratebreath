@@ -1,5 +1,6 @@
 /* --- Base Styles --- */
- font-family: 'Inter', sans-serif;
+body {
+  font-family: 'Inter', sans-serif;
   background-color: #F8F5F0; /* fallback */
   background-image: url('IMG_6842.jpg'); /* your uploaded image */
   background-size: cover;
@@ -9,7 +10,9 @@
   margin: 0;
   padding: 0;
   line-height: 1.7;
+}
 
+/* --- Overlay for readability --- */
 body::before {
   content: "";
   position: fixed;
@@ -20,7 +23,6 @@ body::before {
   background-color: rgba(107, 74, 43, 0.4); /* warm brown tint */
   z-index: -1;
 }
-
 
 /* --- Header --- */
 header {
@@ -52,7 +54,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  color: #8A9D74;
+  color: #8A9D74; /* sage green accent */
 }
 
 /* --- Main Layout --- */
@@ -79,7 +81,7 @@ main {
 }
 
 .event h3 {
-  color: #6B4A2B;
+  color: #6B4A2B; /* primary earthy brown */
   margin-top: 0;
   font-weight: 600;
 }
