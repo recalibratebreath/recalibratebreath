@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About — Recalibrate</title>
+  <title>Events — Recalibrate</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" /
-  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
 <header>
   <div class="header-container">
     <div class="logo">
@@ -14,31 +16,12 @@
     </div>
     <nav class="main-nav">
       <ul>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="offerings.html">Offerings</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </nav>
-  </div>
-</header>
-
-    <!-- Navigation Menu -->
-    <nav class="main-nav">
-      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="offerings.html">Offerings</a></li>
-        <li><a href="events.html">Events</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-
-      <!-- Hamburger (for mobile) -->
       <div class="hamburger">
         <div></div>
         <div></div>
@@ -48,48 +31,47 @@
   </div>
 </header>
 
+<main>
+  <section class="intro">
+    <h2>Upcoming Events</h2>
+    <p>Join us for breathwork, sound, and embodiment gatherings that support deeper connection and vitality.</p>
+  </section>
 
-  <main>
-    <section class="intro">
-      <h2>Upcoming Events</h2>
-      <p>Join us for breathwork, sound, and embodiment gatherings that support deeper connection and vitality.</p>
-    </section>
+  <section class="event-list">
+    <!-- Event 1 -->
+    <article class="event">
+      <h3>🌿 Breathwork & Sound Journey</h3>
+      <p><strong>Date:</strong> November 9, 2025</p>
+      <p><strong>Location:</strong> The Nest Studio, Brighton</p>
+      <p>Experience a two-hour immersive journey weaving breath, vibration, and sound to release tension and reconnect with presence.</p>
+      <a href="https://yourbookinglink.com" target="_blank" class="btn">Book Now</a>
+    </article>
 
-    <section class="event-list">
+    <!-- Event 2 -->
+    <article class="event">
+      <h3>🔥 Reclaim Your Vitality – 3-Day Online Immersion</h3>
+      <p><strong>Date:</strong> December 6–8, 2025</p>
+      <p><strong>Location:</strong> Online via Zoom</p>
+      <p>A guided journey from functional freeze into embodied aliveness through daily breathwork, movement, and integration sessions.</p>
+      <a href="https://yourbookinglink.com" target="_blank" class="btn">Reserve Spot</a>
+    </article>
+  </section>
 
-      <!-- Event 1 -->
-      <article class="event">
-        <h3>🌿 Breathwork & Sound Journey</h3>
-        <p><strong>Date:</strong> November 9, 2025</p>
-        <p><strong>Location:</strong> The Nest Studio, Brighton</p>
-        <p>Experience a two-hour immersive journey weaving breath, vibration, and sound to release tension and reconnect with presence.</p>
-        <a href="https://yourbookinglink.com" target="_blank" class="btn">Book Now</a>
-      </article>
+  <section class="past-events">
+    <h2>Past Events</h2>
+    <p>Here’s a glimpse of previous Recalibrate gatherings and workshops.</p>
+    <ul>
+      <li>💧 “Deep Rest” Breath & Sound – September 2025</li>
+      <li>🌕 Full Moon Breath Ceremony – August 2025</li>
+      <li>🔥 Alchemy of Breath – July 2025</li>
+    </ul>
+  </section>
+</main>
 
-      <!-- Event 2 -->
-      <article class="event">
-        <h3>🔥 Reclaim Your Vitality – 3-Day Online Immersion</h3>
-        <p><strong>Date:</strong> December 6–8, 2025</p>
-        <p><strong>Location:</strong> Online via Zoom</p>
-        <p>A guided journey from functional freeze into embodied aliveness through daily breathwork, movement, and integration sessions.</p>
-        <a href="https://yourbookinglink.com" target="_blank" class="btn">Reserve Spot</a>
-      </article>
+<footer>
+  <p>© <span id="year"></span> Recalibrate</p>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
 
-    </section>
-
-    <section class="past-events">
-      <h2>Past Events</h2>
-      <p>Here’s a glimpse of previous Recalibrate gatherings and workshops.</p>
-      <ul>
-        <li>💧 “Deep Rest” Breath & Sound – September 2025</li>
-        <li>🌕 Full Moon Breath Ceremony – August 2025</li>
-        <li>🔥 Alchemy of Breath – July 2025</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Recalibrate. All rights reserved.</p>
-  </footer>
 </body>
 </html>
