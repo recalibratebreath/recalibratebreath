@@ -33,20 +33,19 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   position: relative;
   z-index: 10;
-  text-align: left;
 }
 
 .header-container {
   display: flex;
-  flex-direction: column; /* logo on top, nav beneath */
-  align-items: flex-start; /* align left */
+  flex-direction: row;           /* logo left, menu right */
+  align-items: center;           /* vertically center items */
+  justify-content: space-between;/* logo left, menu right */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .logo img {
-  height: 60px; /* adjust as needed */
-  margin-bottom: 0.5em; /* spacing between logo and nav */
+  height: 60px;                  /* adjust as needed */
 }
 
 /* --- Navigation Menu --- */
@@ -58,25 +57,26 @@ header {
 }
 
 .main-nav li {
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .main-nav a {
-  font-family: 'Vercetti Regular', sans-serif;
+  font-family: 'Inter', sans-serif;
   text-decoration: none;
   color: #2C2C2C; /* charcoal */
-  font-weight: normal;
+  font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: color 0.3s ease;
 }
 
-.main-nav a:hover {
+.main-nav a:hover,
+.main-nav a.active {
   color: #8A9D74; /* sage green on hover */
 }
 
-/* --- Responsive Hamburger --- */
+/* --- Hamburger for mobile --- */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -90,24 +90,31 @@ header {
   background-color: #2C2C2C;
 }
 
+/* --- Mobile styles --- */
 @media (max-width: 768px) {
   .main-nav ul {
-    flex-direction: column;
     display: none;
-    width: 100%;
+    flex-direction: column;
+    width: 200px;
+    position: absolute;
+    top: 70px;  /* below header */
+    right: 0;
+    background-color: #ffffff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
 
-  .main-nav li {
-    margin: 0.5em 0;
-  }
-
-  .nav-active {
+  .main-nav ul.nav-active {
     display: flex;
   }
 
   .hamburger {
     display: flex;
-    margin-top: 0.5em;
+  }
+
+  .main-nav li {
+    margin: 0.5em 0;
   }
 }
 
