@@ -37,15 +37,14 @@ header {
 
 .header-container {
   display: flex;
-  flex-direction: row;           /* logo left, menu right */
-  align-items: center;           /* vertically center items */
-  justify-content: space-between;/* logo left, menu right */
+  align-items: center; /* vertically center logo + nav */
+  justify-content: space-between; /* logo left, nav right */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .logo img {
-  height: 60px;                  /* adjust as needed */
+  height: 60px; /* adjust as needed */
 }
 
 /* --- Navigation Menu --- */
@@ -57,11 +56,10 @@ header {
 }
 
 .main-nav li {
-  margin-left: 20px;
+  margin-left: 2em;
 }
 
 .main-nav a {
-  font-family: 'Inter', sans-serif;
   text-decoration: none;
   color: #2C2C2C; /* charcoal */
   font-weight: 500;
@@ -76,7 +74,7 @@ header {
   color: #8A9D74; /* sage green on hover */
 }
 
-/* --- Hamburger for mobile --- */
+/* --- Hamburger Menu --- */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -88,34 +86,6 @@ header {
   width: 25px;
   height: 3px;
   background-color: #2C2C2C;
-}
-
-/* --- Mobile styles --- */
-@media (max-width: 768px) {
-  .main-nav ul {
-    display: none;
-    flex-direction: column;
-    width: 200px;
-    position: absolute;
-    top: 70px;  /* below header */
-    right: 0;
-    background-color: #ffffff;
-    padding: 1em;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-
-  .main-nav ul.nav-active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .main-nav li {
-    margin: 0.5em 0;
-  }
 }
 
 /* --- Main Layout --- */
@@ -176,6 +146,34 @@ footer {
   color: #F8F5F0;
   margin-top: 3em;
   font-size: 0.9em;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .main-nav li {
+    margin: 0.5em 0;
+  }
+
+  .nav-active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
 
 /* --- Responsive Event Grid --- */
