@@ -26,7 +26,7 @@ body::before {
 
 /* --- Header --- */
 header {
-  background-color: #F8F5F0; /* off-white */
+  background-color: ##ffffff; /* white */
   padding: 1em 2em;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
