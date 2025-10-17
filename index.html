@@ -46,5 +46,15 @@
     // small script to keep footer year current
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+   <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+    });
+  </script>
+
 </body>
 </html>
