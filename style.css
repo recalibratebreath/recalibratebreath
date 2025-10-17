@@ -26,7 +26,7 @@ body::before {
 
 /* --- Header --- */
 header {
-  background-color: ##ffffff; /* white */
+  background-color: #ffffff; /* White background */
   padding: 1em 2em;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
@@ -39,9 +39,36 @@ header {
   margin: 0 auto;
 }
 
-header .logo img {
+.logo img {
   height: 50px; /* adjust as needed */
 }
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  margin-right: 20px;
+}
+
+.main-nav a {
+  font-family: 'Vercetti Regular', sans-serif;
+  text-decoration: none;
+  color: #2C2C2C; /* Charcoal color */
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #8A9D74; /* Sage green on hover */
+}
+
 
 /* --- Navigation --- */
 nav {
