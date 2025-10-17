@@ -1,4 +1,15 @@
 /* --- Base Styles --- */
+ font-family: 'Inter', sans-serif;
+  background-color: #F8F5F0; /* fallback */
+  background-image: url('IMG_6842.jpg'); /* your uploaded image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #2C2C2C;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+
 body::before {
   content: "";
   position: fixed;
