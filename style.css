@@ -26,19 +26,19 @@ body::before {
   z-index: -1;
 }
 
-/* --- Page-specific backgrounds: Events Page --- */
+/* --- Page-specific backgrounds for events --- */
 body.events-page {
-  background-image: none;       /* remove base image */
-  background-color: #9CAF88;    /* sage green */
+  background-image: none !important;   /* remove base image */
+  background-color: #9CAF88 !important; /* sage green */
 }
 
 body.events-page::before {
-  background-color: transparent; /* remove overlay */
+  display: none !important; /* hide overlay entirely */
 }
 
 /* --- Header --- */
 header {
-  background-color: #ffffff; /* white header */
+  background-color: #ffffff; 
   padding: 1em 2em;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   position: relative;
@@ -47,7 +47,7 @@ header {
 
 .header-container {
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
@@ -186,7 +186,6 @@ footer {
   }
 }
 
-/* --- Responsive Event Grid --- */
 @media (min-width: 700px) {
   .event-list {
     grid-template-columns: 1fr 1fr;
@@ -203,7 +202,7 @@ body.events-page .event-list {
 }
 
 body.events-page .event {
-  background: none; 
+  background: none; /* remove card background */
   border: none;     
   box-shadow: none; 
   padding: 0;       
