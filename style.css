@@ -14,15 +14,6 @@ body {
   z-index: 0;
 }
 
-/* --- Page-specific backgrounds --- */
-body.events-page {
-  background-color: #9CAF88;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-
 /* --- Overlay for readability --- */
 body::before {
   content: "";
@@ -34,10 +25,16 @@ body::before {
   background-color: rgba(107, 74, 43, 0.4); /* warm brown tint */
   z-index: -1;
 }
-body.events-page::before {
-  background-color: transparent; /* remove warm brown tint */
+
+/* --- Page-specific backgrounds: Events Page --- */
+body.events-page {
+  background-image: none;       /* remove base image */
+  background-color: #9CAF88;    /* sage green */
 }
 
+body.events-page::before {
+  background-color: transparent; /* remove overlay */
+}
 
 /* --- Header --- */
 header {
@@ -45,19 +42,19 @@ header {
   padding: 1em 2em;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   position: relative;
-  z-index: 20; /* make sure header is above body::before */
+  z-index: 20; /* ensure header is above overlay */
 }
 
 .header-container {
   display: flex;
-  align-items: center; /* vertically center logo + nav */
-  justify-content: space-between; /* logo left, nav right */
+  align-items: center; 
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .logo img {
-  height: 60px; /* adjust as needed */
+  height: 60px;
 }
 
 /* --- Navigation Menu --- */
@@ -74,7 +71,7 @@ header {
 
 .main-nav a {
   text-decoration: none;
-  color: #2C2C2C; /* charcoal */
+  color: #2C2C2C;
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
@@ -206,10 +203,10 @@ body.events-page .event-list {
 }
 
 body.events-page .event {
-  background: none; /* remove card background */
-  border: none;     /* remove border */
-  box-shadow: none; /* remove shadow */
-  padding: 0;       /* remove card padding */
+  background: none; 
+  border: none;     
+  box-shadow: none; 
+  padding: 0;       
   margin-bottom: 2rem;
 }
 
@@ -238,4 +235,3 @@ body.events-page .btn {
 body.events-page .btn:hover {
   background: #B36B4C;
 }
-
