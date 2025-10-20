@@ -16,7 +16,7 @@ body {
 
 /* --- Page-specific backgrounds --- */
 body.events-page {
-  background-color: ##9CAF88;             /* fallback color if image doesn't load */
+  background-color: #9CAF88;             /* fallback color if image doesn't load */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
