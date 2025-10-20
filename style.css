@@ -181,7 +181,7 @@ body.events-page .event p {
 /* --- Past Event Posters Gallery --- */
 .past-event-posters {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 posters per row */
+  grid-template-columns: repeat(3, 1fr); /* keep 3 per row */
   gap: 1rem;
   justify-items: center;
   margin-top: 1rem;
@@ -189,7 +189,7 @@ body.events-page .event p {
 
 .past-event-posters img {
   width: 100%;      /* fill grid cell */
-  max-width: 200px; /* limit size */
+  max-width: 300px; /* limit size */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
