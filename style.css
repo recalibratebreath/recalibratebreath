@@ -16,7 +16,7 @@ body {
 
 /* --- Page-specific backgrounds --- */
 body.events-page {
-  background-image: url('IMG_1049.jpg'); /* different background for events page */
+  background-image: url('texture 1.jpg'); /* different background for events page */
   background-color: #FFFFFF;             /* fallback color if image doesn't load */
   background-size: cover;
   background-position: center;
