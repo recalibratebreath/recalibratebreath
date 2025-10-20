@@ -15,10 +15,14 @@ body {
 }
 
 /* --- Page-specific backgrounds --- */
-body.events-page{
-  background-image: url('IMG_1049.jpg');      /* remove the global image */
-  background-color: #FFFFFF;   /* plain white background */
+body.events-page {
+  background-image: url('IMG_1049.jpg'); /* different background for events page */
+  background-color: #FFFFFF;             /* fallback color if image doesn't load */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
 
 /* --- Overlay for readability --- */
 body::before {
