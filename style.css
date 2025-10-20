@@ -234,45 +234,23 @@ body.events-page .btn {
 body.events-page .btn:hover {
   background: #B36B4C;
 }
-/* --- Event Layout with Image --- */
+/* --- Event Layout with Small Left Images --- */
 .event {
   display: flex;
-  flex-direction: column; /* stack on mobile */
+  flex-direction: row; /* image left, text right */
   align-items: flex-start;
   gap: 1rem;
-  background: none; 
-  border: none;     
-  box-shadow: none; 
-  padding: 0;       
   margin-bottom: 2rem;
 }
 
 .event-img {
-  width: 100%; /* full width on mobile */
-  max-width: 250px; /* constrain image width on larger screens */
-  border-radius: 12px;
-  object-fit: cover;
-  margin-bottom: 1rem;
+  width: 120px;         /* small thumbnail width */
+  height: 120px;        /* keep square */
+  border-radius: 8px;   /* rounded corners */
+  object-fit: cover;    /* crop nicely */
+  flex-shrink: 0;       /* don't shrink image */
 }
 
 .event-content {
-  flex: 1;
+  flex: 1;              /* take remaining space for text */
 }
-
-/* Event text next to image on larger screens */
-@media (min-width: 700px) {
-  .event {
-    flex-direction: row;
-    gap: 2rem;
-    align-items: flex-start;
-  }
-
-  .event-img {
-    margin-bottom: 0;
-  }
-
-  .event-content {
-    flex: 1; /* take remaining space */
-  }
-}
-
