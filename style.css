@@ -234,23 +234,40 @@ body.events-page .btn {
 body.events-page .btn:hover {
   background: #B36B4C;
 }
-/* --- Event Layout with Small Left Images --- */
+/* --- Event Layout with Thumbnails --- */
 .event {
   display: flex;
-  flex-direction: row; /* image left, text right */
-  align-items: flex-start;
-  gap: 1rem;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
   margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .event-img {
-  width: 120px;         /* small thumbnail width */
-  height: 120px;        /* keep square */
-  border-radius: 8px;   /* rounded corners */
-  object-fit: cover;    /* crop nicely */
-  flex-shrink: 0;       /* don't shrink image */
+  width: 250px; /* Adjust width as needed */
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
 }
 
 .event-content {
-  flex: 1;              /* take remaining space for text */
+  flex: 1;
+  padding: 1rem;
+}
+
+.event h3 {
+  font-size: 1.6rem;
+  margin: 0.5rem 0;
+  color: #2C2C2C;
+}
+
+.event p {
+  margin: 0.4rem 0;
+  color: #555;
 }
