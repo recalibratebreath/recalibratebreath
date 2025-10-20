@@ -28,7 +28,7 @@ body::before {
 
 /* --- Page-specific backgrounds for events --- */
 body.events-page {
-  background-image: none !important;
+  background-image: none !important;   /* remove base image */
   background-color: #9CAF88 !important; /* sage green */
 }
 
@@ -132,56 +132,49 @@ footer {
   background-color: #B36B4C;
 }
 
-/* --- Event Cards Base --- */
-.event-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2em;
-  margin-top: 2em;
-}
-
-/* --- Events Page Layout --- */
+/* --- Event List Layout --- */
 body.events-page .event-list {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
   gap: 2rem;
+  padding: 2rem 1rem;
 }
 
+/* --- Event Card --- */
 body.events-page .event {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  flex-direction: row;       /* image left, content right */
+  align-items: stretch;      /* image fills card height */
   gap: 1.5rem;
+  background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 body.events-page .event-img {
-  width: 250px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
+  width: 40%;           /* image takes 40% of card width */
+  height: 100%;         /* fill full card height */
+  object-fit: cover;    /* crop nicely */
   flex-shrink: 0;
 }
 
 body.events-page .event-content {
   flex: 1;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 body.events-page .event h3 {
   font-size: 1.6rem;
+  font-weight: 600;
   margin: 0 0 0.5rem 0;
   color: #2C2C2C;
 }
 
 body.events-page .event p {
-  margin: 0.4rem 0;
+  margin: 0.3rem 0;
   color: #555;
 }
 
@@ -212,25 +205,13 @@ body.events-page .event p {
     display: flex;
   }
 
-  /* Stack image above text on mobile */
+  /* Stack image on top for mobile */
   body.events-page .event {
     flex-direction: column;
-    align-items: center;
   }
 
   body.events-page .event-img {
     width: 100%;
-    max-width: 400px;
-    margin-bottom: 1rem;
-  }
-
-  body.events-page .event-content {
-    padding: 0;
-  }
-}
-
-@media (min-width: 700px) {
-  .event-list {
-    grid-template-columns: 1fr 1fr;
+    height: auto;
   }
 }
