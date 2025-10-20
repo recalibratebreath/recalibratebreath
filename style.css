@@ -178,6 +178,38 @@ body.events-page .event p {
   color: #555;
 }
 
+/* --- Past Event Posters Gallery --- */
+.past-event-posters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* spacing between posters */
+  justify-content: center; /* center posters */
+  margin-top: 1rem;
+}
+
+.past-event-posters img {
+  width: 200px;        /* fixed width for each poster */
+  height: auto;        /* maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.past-event-posters img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive: stack smaller posters on mobile */
+@media (max-width: 768px) {
+  .past-event-posters img {
+    width: 45%; /* two per row */
+  }
+}
+
+@media (max-width
+
+
 /* --- Responsive Styles --- */
 @media (max-width: 768px) {
   .main-nav ul {
