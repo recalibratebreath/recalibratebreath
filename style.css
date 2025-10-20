@@ -28,7 +28,7 @@ body::before {
 
 /* --- Page-specific backgrounds for events --- */
 body.events-page {
-  background-image: none !important;   /* remove base image */
+  background-image: none !important;
   background-color: #9CAF88 !important; /* sage green */
 }
 
@@ -105,30 +105,14 @@ main {
   padding: 0 1.5em;
 }
 
-/* --- Event Cards --- */
-.event-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2em;
-  margin-top: 2em;
-}
-
-.event {
-  background-color: #fff;
-  border-left: 5px solid #8A9D74;
-  padding: 1.5em;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.event h3 {
-  color: #6B4A2B;
-  margin-top: 0;
-  font-weight: 600;
-}
-
-.event p {
-  margin: 0.4em 0;
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 1.5em 0;
+  background-color: #6B4A2B;
+  color: #F8F5F0;
+  margin-top: 3em;
+  font-size: 0.9em;
 }
 
 /* --- Buttons --- */
@@ -148,14 +132,57 @@ main {
   background-color: #B36B4C;
 }
 
-/* --- Footer --- */
-footer {
-  text-align: center;
-  padding: 1.5em 0;
-  background-color: #6B4A2B;
-  color: #F8F5F0;
-  margin-top: 3em;
-  font-size: 0.9em;
+/* --- Event Cards Base --- */
+.event-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+/* --- Events Page Layout --- */
+body.events-page .event-list {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+body.events-page .event {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body.events-page .event-img {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+body.events-page .event-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+body.events-page .event h3 {
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem 0;
+  color: #2C2C2C;
+}
+
+body.events-page .event p {
+  margin: 0.4rem 0;
+  color: #555;
 }
 
 /* --- Responsive Styles --- */
@@ -184,90 +211,26 @@ footer {
   .hamburger {
     display: flex;
   }
+
+  /* Stack image above text on mobile */
+  body.events-page .event {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body.events-page .event-img {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+  }
+
+  body.events-page .event-content {
+    padding: 0;
+  }
 }
 
 @media (min-width: 700px) {
   .event-list {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-/* --- Events Page Layout --- */
-body.events-page .event-list {
-  display: block; /* stack events vertically */
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  gap: 2rem;
-}
-
-body.events-page .event {
-  background: none; /* remove card background */
-  border: none;     
-  box-shadow: none; 
-  padding: 0;       
-  margin-bottom: 2rem;
-}
-
-body.events-page .event h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin: 0.2rem 0;
-  color: #2C2C2C;
-}
-
-body.events-page .event p {
-  margin: 0.2rem 0;
-  color: #555;
-}
-
-body.events-page .btn {
-  background: #6B4A2B;
-  color: #F8F5F0;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  text-decoration: none;
-  margin-top: 0.5rem;
-  display: inline-block;
-}
-
-body.events-page .btn:hover {
-  background: #B36B4C;
-}
-/* --- Event Layout with Thumbnails --- */
-.event {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.event-img {
-  width: 250px; /* Adjust width as needed */
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  flex-shrink: 0;
-}
-
-.event-content {
-  flex: 1;
-  padding: 1rem;
-}
-
-.event h3 {
-  font-size: 1.6rem;
-  margin: 0.5rem 0;
-  color: #2C2C2C;
-}
-
-.event p {
-  margin: 0.4rem 0;
-  color: #555;
 }
