@@ -234,3 +234,45 @@ body.events-page .btn {
 body.events-page .btn:hover {
   background: #B36B4C;
 }
+/* --- Event Layout with Image --- */
+.event {
+  display: flex;
+  flex-direction: column; /* stack on mobile */
+  align-items: flex-start;
+  gap: 1rem;
+  background: none; 
+  border: none;     
+  box-shadow: none; 
+  padding: 0;       
+  margin-bottom: 2rem;
+}
+
+.event-img {
+  width: 100%; /* full width on mobile */
+  max-width: 250px; /* constrain image width on larger screens */
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.event-content {
+  flex: 1;
+}
+
+/* Event text next to image on larger screens */
+@media (min-width: 700px) {
+  .event {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .event-img {
+    margin-bottom: 0;
+  }
+
+  .event-content {
+    flex: 1; /* take remaining space */
+  }
+}
+
