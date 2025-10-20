@@ -35,6 +35,10 @@ body::before {
   background-color: rgba(107, 74, 43, 0.4); /* warm brown tint */
   z-index: -1;
 }
+body.events-page::before {
+  background-color: transparent; /* remove warm brown tint */
+}
+
 
 /* --- Header --- */
 header {
