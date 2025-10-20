@@ -15,7 +15,7 @@ body {
 }
 
 /* --- Page-specific backgrounds --- */
-body.events-page {
+body.events-page{
   background-image: none;      /* remove the global image */
   background-color: #FFFFFF;   /* plain white background */
 }
