@@ -180,16 +180,17 @@ body.events-page .event p {
 
 /* --- Past Event Posters Gallery --- */
 .past-event-posters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem; /* spacing between posters */
-  justify-content: center; /* center posters */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 posters per row */
+  gap: 1rem;
+  justify-items: center;
   margin-top: 1rem;
 }
 
 .past-event-posters img {
-  width: 180px;        /* fixed width for each poster */
-  height: auto;        /* maintain aspect ratio */
+  width: 100%;      /* fill grid cell */
+  max-width: 200px; /* limit size */
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -200,15 +201,18 @@ body.events-page .event p {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Responsive: stack smaller posters on mobile */
-@media (max-width: 768px) {
-  .past-event-posters img {
-    width: 45%; /* two per row */
+/* --- Responsive: tablets and smaller --- */
+@media (max-width: 1024px) {
+  .past-event-posters {
+    grid-template-columns: repeat(2, 1fr); /* 2 posters per row */
   }
 }
 
-@media (max-width
-
+@media (max-width: 768px) {
+  .past-event-posters {
+    grid-template-columns: 1fr; /* 1 poster per row on mobile */
+  }
+}
 
 /* --- Responsive Styles --- */
 @media (max-width: 768px) {
