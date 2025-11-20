@@ -105,6 +105,13 @@ main {
   padding: 0 1.5em;
 }
 
+.about-content img:first-of-type {
+  max-height: 400px;  /* change this to make it shorter or taller */
+  object-fit: cover;
+  width: 100%;
+}
+
+
 /* --- Footer --- */
 footer {
   text-align: center;
