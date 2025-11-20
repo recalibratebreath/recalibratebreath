@@ -1,147 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About — Recalibrate</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  
-<header>
-  <div class="header-container">
-    <div class="logo">
-      <a href="index.html">
-        <img src="recalibrate-logo.png" alt="Recalibrate Logo">
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="offerings.html">Offerings</a></li>
-        <li><a href="events.html" class="active">Events</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </nav>
-  </div>
-</header>
-  
-<!DOCTYPE html>
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About – Recalibrate</title>
-  <link rel="stylesheet" href="cargo.css" /> <!-- your main cargo CSS -->
-  <style>
-    /* --- Override/additional styles specific to About page --- */
-    .about-hero {
-      margin: 80px 0 60px;
-      text-align: center;
-    }
-
-```
-.about-hero h1 {
-  font-size: 56px;
-  font-weight: 300;
-  margin-bottom: 1rem;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About – Recalibrate Experimental</title>
+<style>
+/* --- GLOBAL --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #f5f3ef;
+  color: #222;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  overflow-x: hidden;
 }
 
-.about-hero p {
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 18px;
-  opacity: 0.7;
-  line-height: 1.6;
+a { color: inherit; text-decoration: none; }
+
+.grain {
+pointer-events: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: url('[https://grainy-gradients.vercel.app/noise.png](https://grainy-gradients.vercel.app/noise.png)');
+opacity: 0.15;
+mix-blend-mode: multiply;
+z-index: 9999;
 }
 
-.about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  margin: 60px auto;
-  max-width: 900px;
+/* --- HEADER --- */
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 2rem;
+position: sticky;
+top: 0;
+background: rgba(255,255,255,0.95);
+z-index: 10;
 }
 
-.about-content img {
-  width: 100%;
-  border-radius: 2px;
-  object-fit: cover;
+.logo { font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
+nav a { margin-left: 24px; opacity: 0.7; font-weight: 500; }
+nav a:hover { opacity: 1; }
+
+/* --- HERO --- */
+.hero {
+text-align: center;
+margin: 80px 20px 100px;
+}
+
+.hero h1 {
+font-size: 56px;
+font-weight: 300;
+margin-bottom: 1rem;
+line-height: 1.1;
+}
+
+.hero p {
+max-width: 600px;
+margin: 0 auto;
+font-size: 18px;
+opacity: 0.7;
+line-height: 1.6;
+}
+
+/* --- ASYMMETRIC ABOUT SECTIONS --- */
+.about-section {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+max-width: 900px;
+margin: 80px auto;
+align-items: flex-start;
+position: relative;
+}
+
+.about-section:nth-child(2n) {
+grid-template-columns: 1.2fr 0.8fr;
+}
+
+.about-section:nth-child(2n+1) {
+grid-template-columns: 0.8fr 1.2fr;
+}
+
+.about-section img {
+width: 100%;
+border-radius: 4px;
+object-fit: cover;
 }
 
 .about-text {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #222;
+font-size: 18px;
+line-height: 1.7;
+background: rgba(255,255,255,0.95);
+padding: 2rem;
+border-radius: 4px;
+box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+position: relative;
+top: -20px;
 }
 
-.about-text p {
-  margin-bottom: 1.5rem;
+/* Offset sections slightly for asymmetric feel */
+.about-section:nth-child(2n) .about-text {
+top: -40px;
+}
+.about-section:nth-child(2n+1) .about-text {
+top: -10px;
 }
 
-@media (max-width: 768px) {
-  .about-content {
-    grid-template-columns: 1fr;
-  }
-
-  .about-hero h1 {
-    font-size: 36px;
-  }
-
-  .about-hero p {
-    font-size: 16px;
-  }
+/* --- FOOTER --- */
+footer {
+text-align: center;
+margin: 140px 0 60px;
+font-size: 12px;
+opacity: 0.55;
 }
-```
 
-  </style>
+/* --- RESPONSIVE --- */
+@media(max-width: 768px) {
+.about-section {
+grid-template-columns: 1fr;
+margin: 40px 20px;
+}
+
+.about-text {
+top: 0;
+padding: 1.5rem;
+}
+
+.hero h1 { font-size: 36px; }
+.hero p { font-size: 16px; }
+} </style>
+
 </head>
 <body>
 
-  <div class="grain"></div> <!-- grain overlay, same as cargo.html -->
+<div class="grain"></div>
 
-  <div class="container">
-    <header>
-      <div class="logo">Recalibrate</div>
-      <nav>
-        <a href="cargo.html">Work</a>
-        <a href="#">About</a>
-        <a href="events.html">Events</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
+<header>
+  <div class="logo">Recalibrate</div>
+  <nav>
+    <a href="cargo.html">Work</a>
+    <a href="#">About</a>
+    <a href="events.html">Events</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
 
-```
-<!-- Hero section -->
-<section class="about-hero">
+<section class="hero">
   <h1>About Recalibrate</h1>
   <p>A space for nervous system ecology, breathwork, movement, and sound‑based ritual. Explore the philosophy, practice, and journey behind our work.</p>
 </section>
 
-<!-- Content section -->
-<section class="about-content">
+<section class="about-section">
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Field recording sessions">
   <div class="about-text">
     <p>Recalibrate was born out of the need to reconnect deeply with the body and nervous system. Through breathwork, sound, and movement, we explore how humans can reconnect with themselves and their environment.</p>
-    <p>Our approach integrates traditional wisdom, contemporary somatic science, and creative expression, offering a safe space for exploration, healing, and transformation.</p>
-    <p>Each session, whether group or 1:1, is designed to deepen awareness, regulate arousal, and expand presence—helping individuals discover their inner resources and capacities for embodiment.</p>
   </div>
-  <div>
-    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Recalibrate practice image" />
+</section>
+
+<section class="about-section">
+  <div class="about-text">
+    <p>Our approach integrates traditional wisdom, contemporary somatic science, and creative expression, offering a safe space for exploration, healing, and transformation.</p>
+  </div>
+  <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80" alt="Breathwork journeys">
+</section>
+
+<section class="about-section">
+  <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=80" alt="Sound & ecology">
+  <div class="about-text">
+    <p>Each session, whether group or 1:1, is designed to deepen awareness, regulate arousal, and expand presence—helping individuals discover their inner resources and capacities for embodiment.</p>
   </div>
 </section>
 
 <footer>
   © Recalibrate, 2025
 </footer>
-```
-
-  </div>
 
 </body>
 </html>
