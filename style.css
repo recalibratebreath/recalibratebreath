@@ -155,7 +155,7 @@ body.events-page .event {
   flex-direction: row;       /* image left, content right */
   align-items: stretch;      /* image fills card height */
   gap: 1.5rem;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -177,7 +177,7 @@ body.events-page .event h3 {
   font-size: 1.6rem;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
-  color: #2C2C2C;
+  color: #ffff;
 }
 
 body.events-page .event p {
