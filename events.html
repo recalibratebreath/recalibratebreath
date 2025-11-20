@@ -33,216 +33,40 @@
   </div>
 </header>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Events — Recalibrate</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* --- Container & typography --- */
-    body.events-page {
-      background-color: #f5f3ef;
-      font-family: 'Inter', sans-serif;
-      color: #2C2C2C;
-      line-height: 1.7;
-      margin: 0;
-      padding: 0;
-    }
+<main>
+  <section class="intro">
+    <h2>Upcoming Events</h2>
+    <p>Breathe, feel, and practice in community.</p>
+  </section>
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
 
- 
-
-    nav a {
-      margin-left: 24px;
-      opacity: 0.7;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 500;
-      font-size: 14px;
-      transition: opacity 0.3s ease;
-    }
-
-    nav a:hover,
-    nav a.active {
-      opacity: 1;
-      color: #8A9D74;
-    }
-
-    /* --- Intro section --- */
-    .intro {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .intro h2 {
-      font-size: 2.5rem;
-      font-weight: 300;
-      margin-bottom: 0.5rem;
-    }
-
-    .intro p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto;
-      opacity: 0.7;
-    }
-
-    /* --- Events list --- */
-    .event-list {
-      display: flex;
-      flex-direction: column;
-      gap: 60px;
-    }
-
-    .event {
-      background: #ffffff;
-      padding: 2rem;
-      border-radius: 6px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    }
-
-    .event h3 {
-      margin-top: 0;
-      margin-bottom: 0.8rem;
-      font-size: 1.5rem;
-      font-weight: 500;
-    }
-
-    .event p {
-      margin: 0.4rem 0;
-      opacity: 0.85;
-    }
-
-    .event p strong {
-      font-weight: 600;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.6rem 1.4rem;
-      background-color: #6B4A2B;
-      color: #F8F5F0;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #B36B4C;
-    }
-
-    /* --- Past events --- */
-    .past-events {
-      margin-top: 80px;
-      text-align: center;
-    }
-
-    .past-events h2 {
-      font-size: 2rem;
-      font-weight: 400;
-      margin-bottom: 1rem;
-    }
-
-    .past-events p {
-      font-size: 1rem;
-      opacity: 0.7;
-      margin-bottom: 1.5rem;
-    }
-
-    .past-event-posters {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      justify-items: center;
-    }
-
-    .past-event-posters img {
-      width: 100%;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    /* --- Footer --- */
-    footer {
-      text-align: center;
-      margin-top: 100px;
-      font-size: 12px;
-      opacity: 0.6;
-      padding-bottom: 40px;
-    }
-
-    /* --- Responsive --- */
-    @media (max-width: 768px) {
-      .intro h2 {
-        font-size: 2.2rem;
-      }
-
-      .event {
-        padding: 1.5rem;
-      }
-    }
-  </style>
-</head>
-<body class="events-page">
-  <div class="container">
-
-    <header>
-      <div class="logo">
-        <a href="index.html">
-          <img src="recalibrate-logo.png" alt="Recalibrate Logo">
-        </a>
-      </div>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="offerings.html">Offerings</a>
-        <a href="events.html" class="active">Events</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <section class="intro">
-      <h2>Upcoming Events</h2>
-      <p>Breathe, feel, and practice in community.</p>
-    </section>
-
-    <section class="event-list">
-      <article class="event">
-        <h3>Winter Breath Sessions</h3>
-        <p><strong>Dates:</strong> November 21, December 14, January 18, February 1</p>
-        <p><strong>Location:</strong> The Goosebarn, Seworgan, Cornwall</p>
-        <p>Journey into the imaginal dreamtime of winter, with Conscious Connected Breathwork by the fire.</p>
-        <a href="https://buytickets.at/recalibratebreath/1920359" target="_blank" class="btn">Book Now</a>
-      </article>
-    </section>
-
-    <section class="past-events">
-      <h2>Past Events</h2>
-      <p>Here’s a glimpse of previous Recalibrate gatherings and workshops.</p>
-      <div class="past-event-posters">
-        <img src="autumn-breath-sessions.jpg" alt="Past Event Poster 1">
-      </div>
-    </section>
-
-    <footer>
-      <p>© <span id="year"></span> Recalibrate</p>
-      <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-    </footer>
-
+    <!-- Event 2 -->
+    <article class="event">
+  <img src="winter-sessions.jpg" alt="Winter Breath Sessions" class="event-img">
+  <div class="event-content">
+    <h3> Winter Breath Sessions</h3>
+    <p><strong>Dates:</strong> November 21, Decemeber 14, January 18, February 1</p>
+    <p><strong>Location:</strong> The Goosebarn, Seworgan, Cornwall</p>
+    <p>Journey into the imaginal dreamtime of winter, with Conscious Connected Breathwork by the fire </p>
+    <a href="https://buytickets.at/recalibratebreath/1920359" target="_blank" class="btn">Book Now</a>
   </div>
-</body>
-</html>
+</article>
 
+<section class="past-events">
+  <h2>Past Events</h2>
+  <p>Here’s a glimpse of previous Recalibrate gatherings and workshops.</p>
+
+  <div class="past-event-posters">
+    <img src="autumn-breath-sessions.jpg" alt="Past Event Poster 1">
+    <!-- Add more as needed -->
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Recalibrate</p>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
 
 </body>
 </html>
