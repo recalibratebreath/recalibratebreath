@@ -106,7 +106,7 @@ main {
 }
 
 .about-content img:first-of-type {
-  max-height: 400px;  /* change this to make it shorter or taller */
+  max-height: 300px;  /* change this to make it shorter or taller */
   object-fit: cover;
   width: 100%;
 }
