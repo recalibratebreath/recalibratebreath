@@ -48,7 +48,7 @@ header {
 /* HERO */
 .hero {
   height: 55vh;
-  background: url('your-hero-image.jpg') center/cover no-repeat;
+  background: url('IMG_1049.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
