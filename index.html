@@ -2,78 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Recalibrate — Breathwork , Ecology, Embodiment </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recalibrate — Breathwork, Ecology, Embodiment</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  
-   <header>
+
+<header>
   <div class="header-container">
-    <div class="logo">
-  <a href="index.html">
-    <img src="recalibrate-logo.png" alt="Recalibrate Logo">
-  </a>
-</div>
-    <nav class="main-nav">
-      <ul>
+    <a href="index.html" class="logo">
+      <img src="recalibrate-logo.png" alt="Recalibrate Logo">
+    </a>
+    <nav>
+      <ul class="nav-links">
         <li><a href="about.html">About</a></li>
         <li><a href="offerings.html">Offerings</a></li>
         <li><a href="events.html" class="active">Events</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
     </nav>
   </div>
 </header>
 
-  <main>
-    <section class="hero">
-      <h2>Tending inner ecologies </h2>
-      <p> </p>
-      <p><a class="cta" href="offerings.html">See offerings</a></p>
-    </section>
+<main>
 
-    <div class="hero-image">
-  <div class="hero-text">
-    <h1>I am John Doe</h1>
-    <p>And I'm a Photographer</p>
-    <button>Hire me</button>
-  </div>
-</div>
-    
-<section class="layout">
-  <div>1</div>
-  <div>2</div>
-</section>
-    
-  </main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Tending inner ecologies</h1>
+    </div>
+  </section>
 
-  <footer>
-    <p>© <span id="year"></span> Recalibrate</p>
-  </footer>
+  <!-- TWO COLUMNS -->
+  <section class="two-col">
+    <div class="col">
+      <h2>Column 1</h2>
+      <p>Write your content here… events, description, etc.</p>
+    </div>
 
-  <script>
-    // small script to keep footer year current
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <div class="col">
+      <h2>Column 2</h2>
+      <p>Put anything you want here — images, more text, links, etc.</p>
+    </div>
+  </section>
 
-   <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+</main>
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('nav-active');
-    });
-  </script>
+<footer>
+  <p>© <span id="year"></span> Recalibrate</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
-
-
-
