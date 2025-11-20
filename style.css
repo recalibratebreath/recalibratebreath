@@ -1,253 +1,111 @@
-/* --- Base Styles --- */
+/* -------- GLOBAL -------- */
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #F8F5F0; /* fallback */
-  background-image: url('IMG_6842.jpg'); 
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: #2C2C2C;
   margin: 0;
   padding: 0;
-  line-height: 1.7;
-  position: relative;
-  z-index: 0;
+  background: #f5f3ef;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+  letter-spacing: 0.2px;
+  line-height: 1.4;
 }
 
-/* --- Overlay for readability --- */
-body::before {
-  content: "";
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+}
+
+/* -------- GRAIN OVERLAY -------- */
+.grain {
   position: fixed;
+  pointer-events: none;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(107, 74, 43, 0.4); /* warm brown tint */
-  z-index: -1;
+  background-image: url('https://grainy-gradients.vercel.app/noise.png');
+  opacity: 0.15;
+  mix-blend-mode: multiply;
+  z-index: 9999;
 }
 
-/* --- Page-specific backgrounds for events --- */
-body.events-page {
-  background-image: none !important;   /* remove base image */
-  background-color: #9CAF88 !important; /* sage green */
-}
-
-body.events-page::before {
-  display: none !important; /* hide overlay entirely */
-}
-
-/* --- Header --- */
-header {
-  background-color: #ffffff; 
-  padding: 1em 2em;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  position: relative;
-  z-index: 20; /* ensure header is above overlay */
-}
-
-.header-container {
+/* -------- HEADER -------- */
+.site-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.logo img {
-  height: 60px;
-}
-
-/* --- Navigation Menu --- */
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.main-nav li {
-  margin-left: 2em;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #2C2C2C;
-  font-weight: 500;
+  align-items: center;
+  padding: 40px 60px;
   font-size: 14px;
+}
+
+.logo {
   text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-  color: #8A9D74; /* sage green on hover */
-}
-
-/* --- Hamburger Menu --- */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: #2C2C2C;
-}
-
-/* --- Main Layout --- */
-main {
-  max-width: 900px;
-  margin: 2em auto;
-  padding: 0 1.5em;
-}
-
-/* --- Footer --- */
-footer {
-  text-align: center;
-  padding: 1.5em 0;
-  background-color: #6B4A2B;
-  color: #F8F5F0;
-  margin-top: 3em;
-  font-size: 0.9em;
-}
-
-/* --- Buttons --- */
-.btn {
-  display: inline-block;
-  background-color: #6B4A2B;
-  color: #F8F5F0;
-  padding: 0.6em 1.2em;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 0.8em;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #B36B4C;
-}
-
-/* --- Event List Layout --- */
-body.events-page .event-list {
-  display: flex;
-  flex-direction: column;
-  max-width: 900px;
-  margin: 0 auto;
-  gap: 2rem;
-  padding: 2rem 1rem;
-}
-
-/* --- Event Card --- */
-body.events-page .event {
-  display: flex;
-  flex-direction: row;       /* image left, content right */
-  align-items: stretch;      /* image fills card height */
-  gap: 1.5rem;
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-body.events-page .event-img {
-  width: 40%;           /* image takes 40% of card width */
-  height: 100%;         /* fill full card height */
-  object-fit: cover;    /* crop nicely */
-  flex-shrink: 0;
-}
-
-body.events-page .event-content {
-  flex: 1;
-  padding: 1.5rem;
-}
-
-body.events-page .event h3 {
-  font-size: 1.6rem;
   font-weight: 600;
-  margin: 0 0 0.5rem 0;
-  color: #2C2C2C;
+  letter-spacing: 1.3px;
 }
 
-body.events-page .event p {
-  margin: 0.3rem 0;
-  color: #555;
+.nav a {
+  margin-left: 24px;
+  opacity: 0.7;
 }
 
-/* --- Past Event Posters Gallery --- */
-.past-event-posters {
+.nav a:hover {
+  opacity: 1;
+}
+
+.clock {
+  margin-left: 24px;
+  opacity: 0.6;
+  font-size: 13px;
+}
+
+/* -------- LAYOUT -------- */
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* -------- HERO -------- */
+.hero {
+  margin: 80px 0 100px 0;
+}
+
+.hero h1 {
+  font-size: 58px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  margin: 0 0 20px 0;
+}
+
+.hero p {
+  font-size: 20px;
+  opacity: 0.7;
+  max-width: 500px;
+}
+
+/* -------- IMAGE GRID -------- */
+.image-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* keep 3 per row */
-  gap: 1rem;
-  justify-items: center;
-  margin-top: 1rem;
+  grid-template-columns: 1fr;
+  gap: 80px;
 }
 
-.past-event-posters img {
-  width: 100%;      /* fill grid cell */
-  max-width: 300px; /* limit size */
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.caption {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-top: 12px;
 }
 
-.past-event-posters img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-/* --- Responsive: tablets and smaller --- */
-@media (max-width: 1024px) {
-  .past-event-posters {
-    grid-template-columns: repeat(2, 1fr); /* 2 posters per row */
-  }
-}
-
-@media (max-width: 768px) {
-  .past-event-posters {
-    grid-template-columns: 1fr; /* 1 poster per row on mobile */
-  }
-}
-
-/* --- Responsive Styles --- */
-@media (max-width: 768px) {
-  .main-nav ul {
-    flex-direction: column;
-    display: none;
-    width: 100%;
-    background-color: #ffffff;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    padding: 1em;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-
-  .main-nav li {
-    margin: 0.5em 0;
-  }
-
-  .nav-active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  /* Stack image on top for mobile */
-  body.events-page .event {
-    flex-direction: column;
-  }
-
-  body.events-page .event-img {
-    width: 100%;
-    height: auto;
-  }
+/* -------- FOOTER -------- */
+.footer {
+  text-align: center;
+  padding: 120px 0 40px 0;
+  opacity: 0.55;
+  font-size: 12px;
 }
