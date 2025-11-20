@@ -1,129 +1,62 @@
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>Recalibrate — Breathwork & Events</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recalibrate — Breathwork , Ecology, Embodiment </title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="is-preload">
-
-  <!-- Wrapper -->
-
-  <div id="wrapper" class="fade-in">
-
-```
-<!-- Hero / Intro -->
-<div id="intro">
-  <h1>Recalibrate</h1>
-  <p>Breathe, feel, and connect.<br />
-  Explore our workshops, events, and breathwork journeys.</p>
-  <ul class="actions">
-    <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Explore</a></li>
-  </ul>
-</div>
-
-<!-- Header -->
-<header id="header">
-  <a href="index.html" class="logo">
-    <img src="recalibrate-logo.png" alt="Recalibrate Logo" />
+<body>
+  
+   <header>
+  <div class="header-container">
+    <div class="logo">
+  <a href="index.html">
+    <img src="recalibrate-logo.png" alt="Recalibrate Logo">
   </a>
+</div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="offerings.html">Offerings</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </div>
 </header>
 
-<!-- Nav -->
-<nav id="nav">
-  <ul class="links">
-    <li class="active"><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="offerings.html">Offerings</a></li>
-    <li><a href="events.html">Events</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <ul class="icons">
-    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-  </ul>
-</nav>
-
-<!-- Main -->
-<div id="main">
-
-  <!-- Upcoming Events -->
-  <section class="posts">
-    <article class="post featured">
-      <header class="major">
-        <h2><a href="#">Winter Breath Sessions</a></h2>
-        <span class="date">Nov 21, Dec 14, Jan 18, Feb 1</span>
-        <p>Journey into the imaginal dreamtime of winter with Conscious Connected Breathwork by the fire at The Goosebarn, Seworgan, Cornwall.</p>
-      </header>
-      <a href="https://buytickets.at/recalibratebreath/1920359" class="image main"><img src="images/winter-sessions.jpg" alt="Winter Breath Sessions" /></a>
-      <ul class="actions special">
-        <li><a href="https://buytickets.at/recalibratebreath/1920359" class="button large">Book Now</a></li>
-      </ul>
-    </article>
-  </section>
-
-  <!-- Past Events -->
-  <section class="posts">
-    <h2>Past Events</h2>
-    <article>
-      <header>
-        <h3>Autumn Breath Sessions</h3>
-        <span class="date">October 2025</span>
-      </header>
-      <a href="#" class="image fit"><img src="images/autumn-breath-sessions.jpg" alt="Autumn Breath Sessions" /></a>
-      <p>A glimpse of previous Recalibrate gatherings and workshops.</p>
-    </article>
-    <!-- Add more past events here if needed -->
-  </section>
-
-</div>
-
-<!-- Footer -->
-<footer id="footer">
-  <section class="split contact">
-    <section class="alt">
-      <h3>Address</h3>
-      <p>Your Address Here<br />City, Postcode</p>
+  <main>
+    <section class="hero">
+      <h2>Tending inner ecologies </h2>
+      <p> </p>
+      <p><a class="cta" href="offerings.html">See offerings</a></p>
     </section>
-    <section>
-      <h3>Email</h3>
-      <p><a href="mailto:info@recalibratebreath.com">info@recalibratebreath.com</a></p>
-    </section>
-    <section>
-      <h3>Social</h3>
-      <ul class="icons alt">
-        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-      </ul>
-    </section>
-  </section>
+  </main>
 
-  <div id="copyright">
-    <ul><li>&copy; Recalibrate</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-  </div>
-</footer>
-```
+  <footer>
+    <p>© <span id="year"></span> Recalibrate</p>
+  </footer>
 
-  </div>
+  <script>
+    // small script to keep footer year current
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
-  <!-- Scripts -->
+   <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-  <script src="assets/js/jquery.min.js"></script>
-
-  <script src="assets/js/jquery.scrollex.min.js"></script>
-
-  <script src="assets/js/jquery.scrolly.min.js"></script>
-
-  <script src="assets/js/browser.min.js"></script>
-
-  <script src="assets/js/breakpoints.min.js"></script>
-
-  <script src="assets/js/util.js"></script>
-
-  <script src="assets/js/main.js"></script>
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+    });
+  </script>
 
 </body>
 </html>
